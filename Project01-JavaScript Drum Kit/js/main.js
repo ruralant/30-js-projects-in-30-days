@@ -10,6 +10,9 @@ function playSound(e) {
   audio.currentTime = 0;
   audio.play();
 }
+
+// grab all the keys displayed on the screen
 const keys = Array.from(document.querySelectorAll('.key'));
+//
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 window.addEventListener('keydown', playSound);
